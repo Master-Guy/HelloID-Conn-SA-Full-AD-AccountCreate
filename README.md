@@ -35,17 +35,17 @@ Please follow the documentation steps on [HelloID Docs](https://docs.helloid.com
 ## Post-setup configuration
 After the all-in-one PowerShell script has run and created all the required resources. The following items need to be configured according to your own environment
  1. Update the following [user defined variables](https://docs.helloid.com/hc/en-us/articles/360014169933-How-to-Create-and-Manage-User-Defined-Variables)
-<table>
-  <tr><td><strong>Variable name</strong></td><td><strong>Example value</strong></td><td><strong>Description</strong></td></tr>
-  <tr><td>ADuserUPNsuffix</td><td>company.local</td><td>Default UPN suffix for your domain</td></tr>
-</table>
- 2. Update the following values in the static data source "AD-account-generate-table-account-types-account-create" connected to the "account type" selector in the form
-<table>
-  <tr><td><strong>Attribute name</strong></td><td><strong>Example value</strong></td><td><strong>Description</strong></td></tr>
-  <tr><td>Path</td><td>OU=Employees,OU=Users,OU=Enyoi,DC=enyoi-media,DC=local</td><td>Active Directory path for new user account</td></tr>
-  <tr><td>Type</td><td>Employee</td><td>Value for new AD account's attribute "employeeType"</td></tr>
-  <tr><td>Groups</td><td>[{\"Name\": \"TestGroup1\"},{\"Name\": \"TestGroup2\"}]</td><td>Json array containing objects for default AD group memberships. The AD groupname must exist in your domain</td></tr>
-</table>
+    <table>
+      <tr><td><strong>Variable name</strong></td><td><strong>Example value</strong></td><td><strong>Description</strong></td></tr>
+      <tr><td>ADuserUPNsuffix</td><td>company.local</td><td>Default UPN suffix for your domain</td></tr>
+    </table>
+ 3. Update the following values in the static data source "AD-account-generate-table-account-types-account-create" connected to the "account type" selector in the form
+    <table>
+      <tr><td><strong>Attribute name</strong></td><td><strong>Example value</strong></td><td><strong>Description</strong></td></tr>
+      <tr><td>Path</td><td>OU=Employees,OU=Users,OU=Enyoi,DC=enyoi-media,DC=local</td><td>Active Directory path for new user account</td></tr>
+      <tr><td>Type</td><td>Employee</td><td>Value for new AD account's attribute "employeeType"</td></tr>
+      <tr><td>Groups</td><td>[{\"Name\": \"TestGroup1\"},{\"Name\": \"TestGroup2\"}]</td><td>Json array containing objects for default AD group memberships. The AD groupname must exist in your domain</td></tr>
+    </table>
 
 ## Manual resources
 This Delegated Form uses the following resources in order to run
